@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="23_Kavita" size="5.000000 6.856866" />
+    <ImageTarget name="21_Balance" size="5.000000 6.856866" />
+    <ImageTarget name="19_Smiles" size="5.000000 6.856866" />
+    <ImageTarget name="14_Swami" size="5.000000 6.856866" />
+    <ImageTarget name="11_Pizza" size="5.000000 6.856866" />
+    <ImageTarget name="10_Goggles" size="5.000000 6.856866" />
+    <ImageTarget name="09_Dan" size="5.000000 6.856866" />
+    <ImageTarget name="08_Temple_Sidhivinayak" size="5.000000 6.856866" />
+    <ImageTarget name="07_Medicine" size="5.000000 6.856866" />
+    <ImageTarget name="06_Book" size="5.000000 6.856866" />
+    <ImageTarget name="05_Graph" size="5.000000 6.856866" />
+    <ImageTarget name="15_Coins" size="5.000000 6.856866" />
+    <ImageTarget name="04_Money_Video" size="1.000000 1.371553" />
+    <ImageTarget name="01_Front_Page" size="5.000000 6.857765" />
+  </Tracking>
+</QCARConfig>
