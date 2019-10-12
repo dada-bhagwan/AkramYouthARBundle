@@ -23,17 +23,17 @@ public class SimpleHelveticaCustomEditor : Editor {
 		
 		//add character models
 		GameObject newAlphabets;
-		newAlphabets = Instantiate(Resources.LoadAssetAtPath("Assets/Simple Helvetica/Models/_Alphabets.fbx", typeof(GameObject))) as GameObject;
+		newAlphabets = Instantiate(AssetDatabase.LoadAssetAtPath("Assets/Simple Helvetica/Models/_Alphabets.fbx", typeof(GameObject))) as GameObject;
 		newAlphabets.name = "_Alphabets";
 		newAlphabets.transform.parent=newSimpleHelvetica.transform;
 		
 		//add script
-		newSimpleHelvetica.AddComponent("SimpleHelvetica");
+		newSimpleHelvetica.AddComponent<SimpleHelvetica>();
 		
 		//add Mesh Renderer
 		newSimpleHelvetica.AddComponent(typeof(MeshRenderer));
 		MeshRenderer thisMeshRenderer = newSimpleHelvetica.GetComponent<MeshRenderer>();
-		thisMeshRenderer.sharedMaterial = Resources.LoadAssetAtPath("Assets/Simple Helvetica/Materials/Default.mat", typeof(Material)) as Material;
+		thisMeshRenderer.sharedMaterial = AssetDatabase.LoadAssetAtPath("Assets/Simple Helvetica/Materials/Default.mat", typeof(Material)) as Material;
 		
 		//instantiating prefab
 		//GameObject SimpleHelvetica);

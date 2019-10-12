@@ -412,7 +412,7 @@ public class SimpleHelvetica : MonoBehaviour {
 		bool selfMesherRendererReceiveShadows = selfMeshRenderer.receiveShadows;
 		Material[] selfMesherRendererSharedMaterials = selfMeshRenderer.sharedMaterials;
 		bool selfMesherRendererUseLightProbes = selfMeshRenderer.useLightProbes;
-		Transform selfMesherRendererLightProbeAnchor = selfMeshRenderer.lightProbeAnchor;
+		Transform selfMesherRendererLightProbeAnchor = selfMeshRenderer.probeAnchor;
 			
 		Debug.Log ("Apply MeshRenderer");
 		
@@ -424,7 +424,7 @@ public class SimpleHelvetica : MonoBehaviour {
 				thisMeshRenderer.receiveShadows = selfMesherRendererReceiveShadows;
 				thisMeshRenderer.sharedMaterials = selfMesherRendererSharedMaterials;
 				thisMeshRenderer.useLightProbes = selfMesherRendererUseLightProbes;
-				thisMeshRenderer.lightProbeAnchor = selfMesherRendererLightProbeAnchor;
+				thisMeshRenderer.probeAnchor = selfMesherRendererLightProbeAnchor;
 			}
 		}
 		
@@ -435,7 +435,7 @@ public class SimpleHelvetica : MonoBehaviour {
 				thisMeshRenderer.receiveShadows = selfMesherRendererReceiveShadows;
 				thisMeshRenderer.sharedMaterials = selfMesherRendererSharedMaterials;
 				thisMeshRenderer.useLightProbes = selfMesherRendererUseLightProbes;
-				thisMeshRenderer.lightProbeAnchor = selfMesherRendererLightProbeAnchor;
+				thisMeshRenderer.probeAnchor = selfMesherRendererLightProbeAnchor;
 			}
 		}
 		
