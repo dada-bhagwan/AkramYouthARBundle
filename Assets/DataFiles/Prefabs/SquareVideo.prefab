@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4390feb873f4ffc8d60c9fe3be4d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayButton: {fileID: 0}
+  m_PlayButton: {fileID: 4655418815756988841}
   m_ProgressBar: {fileID: 0}
 --- !u!1 &2320665187578782124
 GameObject:
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 1534499953015919222}
   - component: {fileID: 2112811378467872982}
   m_Layer: 0
-  m_Name: PauseButton
+  m_Name: PlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 2112811378467872982}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
