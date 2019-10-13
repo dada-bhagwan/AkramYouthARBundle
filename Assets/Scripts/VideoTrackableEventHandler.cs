@@ -19,7 +19,8 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
         
         var objVideoCont=mTrackableBehaviour.GetComponentsInChildren<VideoController>();
 
-        for(int i=0;i<objVideoCont.Length;i++) {
+
+        for (int i=0;i<objVideoCont.Length;i++) {
             mTrackableBehaviour.GetComponentsInChildren<VideoController>()[i].Pause();
         }
 
