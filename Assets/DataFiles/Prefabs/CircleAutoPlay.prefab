@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 8809521569158650198}
   - component: {fileID: 8809521569158650197}
   - component: {fileID: 8809521569158650196}
+  - component: {fileID: 2378947609893615800}
   m_Layer: 0
-  m_Name: CircleAutoPlay2
+  m_Name: CircleAutoPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,8 +124,22 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
+--- !u!114 &2378947609893615800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8809521569158650194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4390feb873f4ffc8d60c9fe3be4d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayButton: {fileID: 0}
+  m_ProgressBar: {fileID: 0}
