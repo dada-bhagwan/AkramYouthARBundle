@@ -125,8 +125,10 @@ public class VideoController : MonoBehaviour
 
     private void ShowPlayButton(bool enable)
     {
-        m_PlayButton.enabled = enable;
-        m_PlayButton.GetComponent<Image>().enabled = enable;
+        if (m_PlayButton != null) {
+            m_PlayButton.enabled = enable;
+            m_PlayButton.GetComponent<Image>().enabled = enable;
+        }
     }
 
     private void LogClipInfo()

@@ -12,9 +12,16 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
 {
     #region PROTECTED_METHODS
 
+    public bool autoplay = true;
+
     protected override void OnTrackingLost()
     {
-        mTrackableBehaviour.GetComponentInChildren<VideoController>().Pause();
+        
+        var objVideoCont=mTrackableBehaviour.GetComponentsInChildren<VideoController>();
+
+        for(int i=0;i<objVideoCont.Length;i++) {
+            mTrackableBehaviour.GetComponentsInChildren<VideoController>()[i].Pause();
+        }
 
         base.OnTrackingLost();
     }
@@ -23,16 +30,14 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
     {
 
         base.OnTrackingFound();
-        
-        var objVideoCont=mTrackableBehaviour.GetComponentsInChildren<VideoController>();
 
-        for(int i=0;i<objVideoCont.Length;i++)
-        {
-        mTrackableBehaviour.GetComponentsInChildren<VideoController>()[i].Play();
+        if (autoplay) {
+            var objVideoCont=mTrackableBehaviour.GetComponentsInChildren<VideoController>();
 
+            for(int i=0;i<objVideoCont.Length;i++) {
+                mTrackableBehaviour.GetComponentsInChildren<VideoController>()[i].Play();
+            }
         }
-        
-        
     }
 
     #endregion // PROTECTED_METHODS
