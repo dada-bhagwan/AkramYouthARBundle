@@ -7474,6 +7474,7 @@ GameObject:
   - component: {fileID: 819501817}
   - component: {fileID: 819501816}
   - component: {fileID: 819501821}
+  - component: {fileID: 819501822}
   m_Layer: 0
   m_Name: ARCamera
   m_TagString: MainCamera
@@ -7586,6 +7587,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iaLandscapeLeft: 1
   autoRotation: 1
+--- !u!114 &819501822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819501815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1839daed6566413b90fbcacc90872f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &836456979
 GameObject:
   m_ObjectHideFlags: 0
