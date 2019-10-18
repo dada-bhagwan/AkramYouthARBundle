@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "150308630541",
+    "firebase_url": "https://akramyouthar.firebaseio.com",
+    "project_id": "akramyouthar",
+    "storage_bucket": "akramyouthar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150308630541:android:529f2c7c804ab897a76544",
+        "android_client_info": {
+          "package_name": "org.dadabhagwan.akramyouthar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150308630541-lcmkmi632815mglmfviihjalvh1bh6ei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkgSWZX1sikHT6tQAvNG-iShUurE-UzcM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "150308630541-lcmkmi632815mglmfviihjalvh1bh6ei.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "150308630541-spuicpm3igc0to62rueq6j113qo9j7ir.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.dadabhagwan.akramyouthar"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

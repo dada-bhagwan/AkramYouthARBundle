@@ -18,10 +18,14 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
     {
         
         var objVideoCont=mTrackableBehaviour.GetComponentsInChildren<VideoController>();
-
+        var objAudioCon = mTrackableBehaviour.GetComponentsInChildren<AudioSource>();
 
         for (int i=0;i<objVideoCont.Length;i++) {
             mTrackableBehaviour.GetComponentsInChildren<VideoController>()[i].Pause();
+        }
+
+        for (int i=0;i< objAudioCon.Length;i++) {
+            mTrackableBehaviour.GetComponentsInChildren<AudioSource>()[i].Pause();
         }
 
         base.OnTrackingLost();
@@ -34,9 +38,13 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
 
         if (autoplay) {
             var objVideoCont=mTrackableBehaviour.GetComponentsInChildren<VideoController>();
-
-            for(int i=0;i<objVideoCont.Length;i++) {
+            var objAudioCon = mTrackableBehaviour.GetComponentsInChildren<AudioSource>();
+            for (int i=0;i<objVideoCont.Length;i++) {
                 mTrackableBehaviour.GetComponentsInChildren<VideoController>()[i].Play();
+            }
+            for (int i = 0; i < objAudioCon.Length; i++)
+            {
+                mTrackableBehaviour.GetComponentsInChildren<AudioSource>()[i].Play();
             }
         }
     }
