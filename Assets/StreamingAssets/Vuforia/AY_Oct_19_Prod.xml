@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="23_Kavita_New" size="5.000000 6.856866" />
     <ImageTarget name="22_Podcast" size="5.000000 6.856866" />
     <ImageTarget name="17_Niruma_Circle" size="5.000000 6.856866" />
     <ImageTarget name="16_Niruma" size="5.000000 6.856866" />
