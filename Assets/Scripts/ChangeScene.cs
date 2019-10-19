@@ -21,4 +21,14 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("Video");
     }
+
+    public void GoToAbout()
+    {
+        SceneManager.LoadScene("About");
+    }
+
+    public void OpenYouthApp()
+    {
+        Application.OpenURL("market://details?id=org.dadabhagwan.youth");
+    }
 }
