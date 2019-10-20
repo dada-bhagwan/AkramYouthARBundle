@@ -6,6 +6,17 @@ using Firebase.Analytics;
 public class FBPushNotification : MonoBehaviour
 {
     // Start is called before the first frame update
+
+
+    public void OnTokenReceived(object sender, Firebase.Messaging.TokenReceivedEventArgs token)
+    {
+        UnityEngine.Debug.Log("########## Received Registration Token: " + token.Token);
+    }
+
+    public void OnMessageReceived(object sender, Firebase.Messaging.MessageReceivedEventArgs e)
+    {
+        UnityEngine.Debug.Log("########## Received a new message from: " + e.Message.From);
+    }
     void Start()
     {
         Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
@@ -26,6 +37,8 @@ public class FBPushNotification : MonoBehaviour
                 // Firebase Unity SDK is not safe to use here.
             }
         });
+        Firebase.Messaging.FirebaseMessaging.TokenReceived += OnTokenReceived;
+        Firebase.Messaging.FirebaseMessaging.MessageReceived += OnMessageReceived;
     }
 
     // Update is called once per frame
