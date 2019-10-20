@@ -19,6 +19,7 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
         
         var objVideoCont=mTrackableBehaviour.GetComponentsInChildren<VideoController>();
         var objAudioCon = mTrackableBehaviour.GetComponentsInChildren<AudioSource>();
+        Animation[] animationComponents = GetComponentsInChildren<Animation>();
 
         for (int i=0;i<objVideoCont.Length;i++) {
             mTrackableBehaviour.GetComponentsInChildren<VideoController>()[i].Pause();
@@ -26,6 +27,11 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
 
         for (int i=0;i< objAudioCon.Length;i++) {
             mTrackableBehaviour.GetComponentsInChildren<AudioSource>()[i].Pause();
+        }
+
+        foreach (Animation component in animationComponents) {
+            component.Stop();
+            // component.Rewind();
         }
 
         base.OnTrackingLost();
@@ -39,12 +45,16 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
         if (autoplay) {
             var objVideoCont=mTrackableBehaviour.GetComponentsInChildren<VideoController>();
             var objAudioCon = mTrackableBehaviour.GetComponentsInChildren<AudioSource>();
+            Animation[] animationComponents = GetComponentsInChildren<Animation>();
+
             for (int i=0;i<objVideoCont.Length;i++) {
                 mTrackableBehaviour.GetComponentsInChildren<VideoController>()[i].Play();
             }
-            for (int i = 0; i < objAudioCon.Length; i++)
-            {
+            for (int i = 0; i < objAudioCon.Length; i++) {
                 mTrackableBehaviour.GetComponentsInChildren<AudioSource>()[i].Play();
+            }
+            foreach (Animation component in animationComponents) {
+                component.Play();
             }
         }
     }
