@@ -30,9 +30,8 @@ public class Startup
             if (!processCall.CheckVersion())
             {
                 Debug.Log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Application Quit by fource!!");
-                //ShowPopupExample.Init();
-                System.Threading.Thread.Sleep(30000);
-                Application.Quit();
+                ShowPopupExample.OpenWin();
+                //System.Threading.Thread.Sleep(30000);
             }
 
             // EditorApplication.update += Update;
