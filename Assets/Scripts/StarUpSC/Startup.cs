@@ -23,11 +23,11 @@ using System;
 public class Startup
 {
     static Startup()
-    {
+    {   
         try
         {
             ProcessCall processCall = new ProcessCall();
-            if (processCall.CheckVersion())
+            if (!processCall.CheckVersion())
             {
                 Debug.Log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Application Quit by fource!!");
                 //ShowPopupExample.Init();
@@ -38,7 +38,7 @@ public class Startup
             // EditorApplication.update += Update;
             //Debug.Log("Up and running app version: " + Application.version + " Unity version: " + Application.unityVersion);
         }
-        catch (Exception ex)
+        catch (Exception ex)    
         {
             Debug.LogError(ex);
         }
