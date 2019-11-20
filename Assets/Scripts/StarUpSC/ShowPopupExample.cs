@@ -13,7 +13,7 @@ public class ShowPopupExample : EditorWindow
 
     void OnGUI()
     {
-        EditorGUILayout.LabelField("Please Update version!", EditorStyles.wordWrappedLabel);
+        EditorGUILayout.LabelField("Please Update version1!", EditorStyles.wordWrappedLabel);
         GUILayout.Space(70);
         if (GUILayout.Button("Agree!")) this.Close();
     }

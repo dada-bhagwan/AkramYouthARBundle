@@ -29,8 +29,8 @@ public class Startup
             ProcessCall processCall = new ProcessCall();
             if (processCall.CheckVersion())
             {
-                Debug.Log("Application Quit by fource!!");
-                ShowPopupExample.Init();
+                Debug.Log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Application Quit by fource!!");
+                //ShowPopupExample.Init();
                 System.Threading.Thread.Sleep(30000);
                 Application.Quit();
             }
