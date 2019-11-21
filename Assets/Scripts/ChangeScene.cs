@@ -25,7 +25,7 @@ public class ChangeScene : MonoBehaviour
     public void GoToVideo()
     {
         //SceneManager.LoadScene("Video");
-        Application.OpenURL("https://rebrand.ly/akramyouthar");
+        Application.OpenURL("https://youtu.be/hvSGjNGqQoQ");
     }
 
     public void GoToAbout()

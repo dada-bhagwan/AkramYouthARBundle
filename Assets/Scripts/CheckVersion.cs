@@ -13,10 +13,11 @@ public class CheckVersion : MonoBehaviour
         {
             Debug.Log("############################### Inside Start");
             ProcessCall processCall = new ProcessCall();
-            if (processCall.IsAppUpdateAvailable())
+            if (IsAppUpdateAvailable())
             {
                 Debug.Log("############################### App Update Version available");
                 Popup.SetActive(true);
+
                 //System.Threading.Thread.Sleep(30000);
             }
 
@@ -34,4 +35,23 @@ public class CheckVersion : MonoBehaviour
     {
         
     }
+
+    public bool IsAppUpdateAvailable()
+    {
+        ProcessCall processCall = new ProcessCall();
+        string playstoreVersion = processCall.GetVersion().ay_android_version;
+        Debug.Log("########## Playstor Version:" + playstoreVersion);
+        var appVersion = Application.version;
+        Debug.Log("########## App Version:" + appVersion);
+        var version1 = new Version(playstoreVersion);
+        var version2 = new Version(appVersion);
+
+        var result = version1.CompareTo(version2);
+        Debug.Log("########## Result:" + result);
+        if (result > 0)
+            return true;
+        return false;
+    }
+
+    
 }

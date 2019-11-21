@@ -13,13 +13,37 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
     #region PROTECTED_METHODS
 
     public bool autoplay = true;
-    bool isFirst = true;
-    public GameObject rotatePanel;
+    static bool isSecondTargetOfAction = true;
+    public GameObject actionCanvas;
     public static bool isTrakingFound = false;
     GameObject HelpPanel;
-    string[] RotateTargetName = new string[3] { "01_Front_Page", "05_Chicken", "07_Glasses"};
+    string[] RotateTargetName = new string[4] { "01_Front_Page", "05_Chicken", "07_Glasses", "04_Gnani_With_Youth" };
 
-   
+    public GameObject[] resetObj;
+    Vector3[] startScale;
+    Vector3[] startPos;
+    Quaternion[] startRotation;
+
+
+    private void Start()
+    {
+        base.Start();
+        if(resetObj != null && resetObj.Length > 0)
+        {
+            startScale = new Vector3[resetObj.Length];
+            startPos = new Vector3[resetObj.Length];
+            startRotation = new Quaternion[resetObj.Length];
+            Debug.Log("@@@@@@@@@@@@@@@@@@@@@@ Lenght:" + resetObj.Length);
+            for (int i = 0; i < resetObj.Length; i++ )
+            {
+                startPos[i] = resetObj[i].transform.position;
+                startRotation[i] = resetObj[i].transform.rotation;
+                startScale[i] = resetObj[i].transform.localScale;
+                Debug.Log("Initial Position:" + startPos[i]);
+            }
+        }
+    }
+
     protected override void OnTrackingLost()
     {
         isTrakingFound = false;
@@ -45,9 +69,9 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
             component.enabled = false;
             // component.Rewind();
         }
-        if (rotatePanel != null)
+        if (actionCanvas != null)
         {
-            rotatePanel.SetActive(false);
+            actionCanvas.SetActive(false);
         }
 
         //HelpPanel.SetActive(true);
@@ -67,11 +91,11 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
         {
             if (mTrackableBehaviour.TrackableName.Contains(x))
             {
-                Debug.Log("############ TrackingFound:" + rotatePanel);
-                if (rotatePanel != null)
+                if (actionCanvas != null)
                 {
-                    rotatePanel.SetActive(true);
+                    actionCanvas.SetActive(true);
                 }
+                //reset();
             }
         }
 
@@ -106,7 +130,22 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
                         component.Rebind();
                     }
                 }
-                isFirst = false;
+                isSecondTargetOfAction = false;
+            }
+        }
+    }
+
+    public void reset()
+    {
+        if (resetObj != null && resetObj.Length > 0)
+        {
+            Debug.Log("Reset Position:" + startRotation);
+            for (int i = 0; i < resetObj.Length; i++)
+            {
+                resetObj[i].transform.rotation = startRotation[i];
+                resetObj[i].transform.position = startPos[i];
+                resetObj[i].transform.localScale = startScale[i];
+                Debug.Log("Reset Position:" + startPos[i]);
             }
         }
     }

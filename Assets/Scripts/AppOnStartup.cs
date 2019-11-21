@@ -27,13 +27,13 @@ class AppOnStartup
         try
         {
             Debug.Log("############################### Inside Startup");
-            ProcessCall processCall = new ProcessCall();
+            /*ProcessCall processCall = new ProcessCall();
             if (!processCall.CheckVersion())
             {
                 Debug.Log("############################### Application Quit by fource!!");
                 ShowPopupExample.OpenWin();
                 //System.Threading.Thread.Sleep(30000);
-            }
+            }*/
 
             // EditorApplication.update += Update;
             //Debug.Log("Up and running app version: " + Application.version + " Unity version: " + Application.unityVersion);
