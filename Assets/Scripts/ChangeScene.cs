@@ -38,6 +38,11 @@ public class ChangeScene : MonoBehaviour
         Application.OpenURL("market://details?id=org.dadabhagwan.youth");
     }
 
+    public void OpenAkramYouthARApp()
+    {
+        Application.OpenURL("market://details?id=org.dadabhagwan.akramyouthar");
+    }
+
     public void OpenAkramYouthMagazine()
     {
         Application.OpenURL("https://youth.dadabhagwan.org/gallery/akram-youth/");

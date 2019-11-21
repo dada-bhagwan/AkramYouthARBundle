@@ -24,7 +24,7 @@ public class Startup
 {
     static Startup()
     {   
-        try
+        /*try
         {
             ProcessCall processCall = new ProcessCall();
             if (!processCall.CheckVersion())
@@ -40,7 +40,7 @@ public class Startup
         catch (Exception ex)    
         {
             Debug.LogError(ex);
-        }
+        }*/
     }
 
     static void Update()
