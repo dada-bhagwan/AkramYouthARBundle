@@ -53,7 +53,7 @@ public class ProcessCall
     //        }
     //    }
     //}
-    public bool CheckVersion()
+    public bool CheckVersion(string version)
     {
 
         bool objRe = true;
@@ -61,7 +61,7 @@ public class ProcessCall
         Debug.Log("######################### Call from Process Call");
         var objVersion = GetVersion();
         Debug.Log(objVersion.ay_android_version);
-        if (Application.version != objVersion.ay_android_version)
+        if (version != objVersion.ay_android_version)
         {
             objRe = false;
         }

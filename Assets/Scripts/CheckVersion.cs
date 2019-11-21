@@ -1,25 +1,30 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
-
+using System.Threading;
 public class CheckVersion : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject Popup;
-    void Start()
+   async void  Start()
     {
         try
         {
             Debug.Log("############################### Inside Start");
-            ProcessCall processCall = new ProcessCall();
-            if (IsAppUpdateAvailable())
-            {
-                Debug.Log("############################### App Update Version available");
-                Popup.SetActive(true);
+            string ver = Application.version;
 
-                //System.Threading.Thread.Sleep(30000);
-            }
+            Thread thread =  new Thread(() => IsAppUpdateAvailable(ver)) { Name = "Thread 1" };
+            thread.Start();
+
+             //await IsAppUpdateAvailable();
+            //if (isDone)
+            //{
+            //    Debug.Log("############################### App Update Version available");
+            //    Popup.SetActive(true);
+            //    //System.Threading.Thread.Sleep(30000);
+            //}
 
             // EditorApplication.update += Update;
             //Debug.Log("Up and running app version: " + Application.version + " Unity version: " + Application.unityVersion);
@@ -35,22 +40,35 @@ public class CheckVersion : MonoBehaviour
     {
         
     }
-
-    public bool IsAppUpdateAvailable()
+    //public async Task IsAppUpdateAvailable()
+    private  void IsAppUpdateAvailable(string version)
     {
-        ProcessCall processCall = new ProcessCall();
-        string playstoreVersion = processCall.GetVersion().ay_android_version;
-        Debug.Log("########## Playstor Version:" + playstoreVersion);
-        var appVersion = Application.version;
-        Debug.Log("########## App Version:" + appVersion);
-        var version1 = new Version(playstoreVersion);
-        var version2 = new Version(appVersion);
+        try
+        {
+            Thread.Sleep(30000);
 
-        var result = version1.CompareTo(version2);
-        Debug.Log("########## Result:" + result);
-        if (result > 0)
-            return true;
-        return false;
+            ProcessCall processCall = new ProcessCall();
+            string playstoreVersion = processCall.GetVersion().ay_android_version;
+            Debug.Log("########## Playstor Version:" + playstoreVersion);
+            var appVersion = version;
+            Debug.Log("########## App Version:" + appVersion);
+            var version1 = new Version(playstoreVersion);
+            var version2 = new Version(appVersion);
+
+            var result = version1.CompareTo(version2);
+            Debug.Log("########## Result:" + result);
+            if (result > 0)
+            {
+                Thread.Sleep(30000);
+
+                Debug.Log("############################### App Update Version available");
+                Popup.SetActive(true);
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError(ex);
+        }
     }
 
     
