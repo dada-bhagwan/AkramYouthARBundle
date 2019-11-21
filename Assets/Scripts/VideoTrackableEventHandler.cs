@@ -25,7 +25,7 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
     Quaternion[] startRotation;
 
 
-    private void Start()
+    /*private void Start()
     {
         base.Start();
         if(resetObj != null && resetObj.Length > 0)
@@ -42,7 +42,7 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
                 Debug.Log("Initial Position:" + startPos[i]);
             }
         }
-    }
+    }*/
 
     protected override void OnTrackingLost()
     {
@@ -69,10 +69,10 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
             component.enabled = false;
             // component.Rewind();
         }
-        if (actionCanvas != null)
+        /*if (actionCanvas != null)
         {
             actionCanvas.SetActive(false);
-        }
+        }*/
 
         //HelpPanel.SetActive(true);
         base.OnTrackingLost();
@@ -87,7 +87,7 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
         }
         isTrakingFound = true;
         base.OnTrackingFound();
-        foreach (string x in RotateTargetName)
+        /*foreach (string x in RotateTargetName)
         {
             if (mTrackableBehaviour.TrackableName.Contains(x))
             {
@@ -97,7 +97,7 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
                 }
                 //reset();
             }
-        }
+        }*/
 
         if (autoplay) {
             var objVideoCont=mTrackableBehaviour.GetComponentsInChildren<VideoController>();
@@ -135,20 +135,20 @@ public class VideoTrackableEventHandler : DefaultTrackableEventHandler
         }
     }
 
-    public void reset()
+    /*public void reset()
     {
         if (resetObj != null && resetObj.Length > 0)
         {
             Debug.Log("Reset Position:" + startRotation);
             for (int i = 0; i < resetObj.Length; i++)
             {
-                resetObj[i].transform.rotation = startRotation[i];
-                resetObj[i].transform.position = startPos[i];
+                //resetObj[i].transform.rotation = startRotation[i];
+                //resetObj[i].transform.position = startPos[i];
                 resetObj[i].transform.localScale = startScale[i];
                 Debug.Log("Reset Position:" + startPos[i]);
             }
         }
-    }
+    }*/
 
     #endregion // PROTECTED_METHODS
 }
