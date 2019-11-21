@@ -2960,7 +2960,7 @@ PrefabInstance:
     - target: {fileID: 961983248954668862, guid: beaafa477dea2ef4bad554433f9575d3,
         type: 3}
       propertyPath: m_Text
-      value: Octomber-19
+      value: October-19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beaafa477dea2ef4bad554433f9575d3, type: 3}
