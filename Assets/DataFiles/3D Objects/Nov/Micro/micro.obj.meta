@@ -3,7 +3,17 @@ guid: 08b293b596b62fa4db8890625059430b
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nurbsToPoly1Mat
+    second: {fileID: 2100000, guid: 5852248e74e9ef24e84122b3c6da70b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube14_group16Mat
+    second: {fileID: 2100000, guid: 7e287076caa238248a60b6eacc02bf02, type: 2}
   materials:
     importMaterials: 1
     materialName: 2
@@ -35,7 +45,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1

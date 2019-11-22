@@ -12,9 +12,9 @@ class AppOnStartup
 
         Debug.Log("################## Before first Scene loaded");
         //LoadModelAsync();
-        string ver = Application.version;
+        /*string ver = Application.version;
         Thread thread = new Thread(() => LoadModelAsync(ver)) { Name = "Thread 1" };
-        thread.Start();
+        thread.Start();*/
         Debug.Log("################## Before first Scene loaded Done");
     }
 
